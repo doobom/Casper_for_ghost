@@ -75,11 +75,24 @@ into the {body} of the default.hbs template --}}
 
             </footer>
 
-            {{!--
             <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
+            <div id="discomment"></div>
+                <script>
+                        var disq = new iDisqus('discomment', {
+                                forum: 'defrundis',
+                                site: '{{@blog.url}}',
+                                api: 'https://disqus.def.run/def.run',
+                                url: '{{url}}',
+                                mode: 2,
+                                timeout: 3000,
+                                init: true,
+                                emojiPreview: true
+                });
+                disq.count();
+                </script>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+
             </section>
-            --}}
 
         </article>
 
